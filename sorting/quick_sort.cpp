@@ -30,14 +30,14 @@ void divide(int a[], int low, int high)
 {
     if (low < high)
     {
-        int pivotIndex = swapping(a, 0, high);
-        swapping(a, low, pivotIndex - 1);
-        swapping(a, pivotIndex + 1, high);
+        int pivotIndex = swapping(a, low, high);
+        divide(a, low, pivotIndex - 1);
+        divide(a, pivotIndex + 1, high);
     }
 }
-void printArray(int a[])
+void printArray(int a[], int size)
 {
-    for (int k = 0; k < 5; k++)
+    for (int k = 0; k < size; k++)
     {
         cout << a[k] << " ";
     }
@@ -56,5 +56,5 @@ int main()
     // sorted array
     divide(a, 0, size-1);
     // printing process after sorting
-    printArray(a);
+    printArray(a, size);
 }
