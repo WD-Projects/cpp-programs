@@ -41,55 +41,84 @@
 
 
 
+// #include <iostream>
+// using namespace std;
+// void conquer(int arr[], int low, int mid, int high){
+//     int i = low;
+//     int j = mid + 1;
+//     int k = 0;
+//     int temp[high - low + 1];
+//     while(i <= mid && j <= high){
+//         if(arr[i] < arr[j]){
+//             temp[k] = arr[i];
+//             i++;
+//             k++;
+//         }
+//         else{
+//             temp[k] = arr[j];
+//             j++;
+//             k++;
+//         }
+//     }
+//     while(i <= mid){
+//         temp[k] = arr[i];
+//         i++;
+//         k++;
+//     }
+//     while(j <= high){
+//         temp[k] = arr[j];
+//         j++;
+//         k++;
+//     }
+//     for(int p = 0; p < k; p++){
+//         arr[low + p] = temp[p];
+//     }
+// }
+// void divide(int arr[], int low, int high){
+//     int mid = low + ((high - low)/2);
+//     if(low < high){
+//         divide(arr, low, mid);
+//         divide(arr, mid + 1, high);
+//         conquer(arr, low, mid, high);
+//     }
+// }
+// void printArray(int arr[], int size){
+//     for(int i = 0; i < size; i++){
+//         cout << arr[i] << " ";
+//     }
+// }    
+// int main(){
+//     int arr[6] = {23, 11, 34, 1, 0, 45};
+//     int size = sizeof(arr)/sizeof(arr[0]);
+//     divide(arr, 0, size - 1);
+//     printArray(arr, size);
+// }
+
+
+
 #include <iostream>
 using namespace std;
-void conquer(int arr[], int low, int mid, int high){
-    int i = low;
-    int j = mid + 1;
-    int k = 0;
-    int temp[high - low + 1];
-    while(i <= mid && j <= high){
-        if(arr[i] < arr[j]){
-            temp[k] = arr[i];
-            i++;
-            k++;
+void insertion(int arr[], int low, int high){
+    int j = low + 1;
+    while(j < high){
+        int i = j - 1;
+        int temp = arr[j];
+        while((temp < arr[i]) && i >= 0){
+            arr[i + 1] = arr[i];
+            i--;
         }
-        else{
-            temp[k] = arr[j];
-            j++;
-            k++;
-        }
-    }
-    while(i <= mid){
-        temp[k] = arr[i];
-        i++;
-        k++;
-    }
-    while(j <= high){
-        temp[k] = arr[j];
+        arr[i + 1] = temp;
         j++;
-        k++;
-    }
-    for(int p = 0; p < k; p++){
-        arr[low + p] = temp[p];
     }
 }
-void divide(int arr[], int low, int high){
-    int mid = low + ((high - low)/2);
-    if(low < high){
-        divide(arr, low, mid);
-        divide(arr, mid + 1, high);
-        conquer(arr, low, mid, high);
-    }
-}
-void printArray(int arr[], int size){
-    for(int i = 0; i < size; i++){
-        cout << arr[i] << " ";
-    }
-}    
+ void printArray(int arr[], int size){
+     for(int i = 0; i < size; i++){
+         cout << arr[i] << " ";
+     }
+ }   
 int main(){
     int arr[6] = {23, 11, 34, 1, 0, 45};
     int size = sizeof(arr)/sizeof(arr[0]);
-    divide(arr, 0, size - 1);
+    insertion(arr, 0, size);
     printArray(arr, size);
 }
