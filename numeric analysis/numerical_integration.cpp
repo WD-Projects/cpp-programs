@@ -2,22 +2,24 @@
 #include <cmath>
 using namespace std;
 double f(double x){
-    return (2000 * log(140000 / (140000 - 2100 * x)) - 9.8 * x);
+    return (2000 * log(140000 / (140000 - 2100 * x)) - 9.8 * x); // equation which will be integrated
 }
 double simpson_oneThird_rule(double a, double b, int n){
+    // checking if the rule is working or not bcz the rule will work for even number of segments
     if(n % 2 != 0){
         return -1;
     }
-    double h = (b - a) / n;
+    double h = (b - a) / n; // determining the intervals
     double result = 0;
     for(int i = 0; i <= n; i++){
         double x = (a + (i * h));
-        int coefficient = (i % 2 == 0) ? 2 : 4;
+        int coefficient = (i % 2 == 0) ? 2 : 4; // used ternary operator 
         result = result + (coefficient * f(x));
     }
     return ((h/3) * (result - (f(a) + f(b))));
 }
 double simpson_threeByEight_rule(double a, double b, int n){
+    // checking if the rule is working or not bcz the rule will work for number of segments with multiple of three
     if(n % 3 != 0){
         return -1;
     }

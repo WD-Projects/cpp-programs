@@ -14,13 +14,11 @@ double bisection_method(double a, double b)
         cout << "Bisection method cannot be applied";
         return NAN;
     }
+    cout << "Root finding with bisection method : " << endl;
     cout << setw(15) << "a" << setw(15) << "b" << setw(15) << "f(a)" << setw(15) << "f(b)" << setw(15) << "c" << setw(15) << "f(c)" << endl;
-    while (abs(b - a) >= 0.01)
+    while (abs(f(c)) >= 0.001)
     {
         c = (a + b) / 2;
-        if(f(c) == 0){
-            break;
-        }
         if (f(a) * f(c) <= 0){
             b = c;
         }
