@@ -15,9 +15,9 @@ double bisection_method(double a, double b)
         return NAN;
     }
     cout << setw(15) << "a" << setw(15) << "b" << setw(15) << "f(a)" << setw(15) << "f(b)" << setw(15) << "c" << setw(15) << "f(c)" << endl;
-    while (abs(b - a) >= 0.01)
+    while (abs(f(c)) >= 0.0001)
     {
-        c = (a + b) / 2;
+        c = ((a * f(b)) - (b * f(a))) / (f(b) - f(a));
         if(f(c) == 0){
             break;
         }
