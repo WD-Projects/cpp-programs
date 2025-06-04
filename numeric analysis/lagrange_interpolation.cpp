@@ -8,7 +8,7 @@ double lagrange_interpolation(vector<double> &x, vector<double> &y, double value
         double term = 1;
         for(int j = 0; j < n; j++){
             if(i != j){
-                term *= (value - x[j])/(x[i]-x[j]); // formula for determining interpolation 
+                term *= (value - x[j]) / (x[i] - x[j]); // formula for determining interpolation 
             }
         }
         result += (term * y[i]);
@@ -22,12 +22,10 @@ int main(){
     // using vector for dynamic memory allocation
     vector<double> x(n), y(n);
     double value, finalResult;
-    // taking the inputs
     cout << "Enter the values for array x:" << endl;
     for(int i = 0; i < n; i++){
         cin >> x[i];
     }
-
     cout << "Enter the values for array y:" << endl;
     for(int j = 0; j < n; j++){
         cin >> y[j];
@@ -35,7 +33,6 @@ int main(){
     // taking the value of x for finding y
     cout << "Enter the value of f(x) = ";
     cin >> value;
-
     finalResult = lagrange_interpolation(x, y, value, n);
-    cout << finalResult;
+    cout << "final result is : " << finalResult;
 }

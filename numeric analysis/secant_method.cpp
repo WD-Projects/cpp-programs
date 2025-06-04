@@ -18,11 +18,11 @@ void secantMethod(double x0, double x1) {
         x0 = x1;
         x1 = c;
     }
-    cout << "The value of root is: " << c << endl; // printing the value of root
+    cout << "The value of root using secant method is: " << c << endl;
 }
 int main() {
     double x0, x1; 
     cout << "Enter the value for x0 and x1 : " << endl;
     cin >> x0 >> x1;
-    secantMethod(x0, x1); // calling the function 
+    secantMethod(x0, x1); 
 }

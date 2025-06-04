@@ -19,7 +19,7 @@ double simpson_oneThird_rule(double a, double b, int n){
     return ((h/3) * (result - (f(a) + f(b))));
 }
 double simpson_threeByEight_rule(double a, double b, int n){
-    // checking if the rule is working or not bcz the rule will work for number of segments with multiple of three
+    // checking if the rule is working or not bcz the rule will work for number of segments which is multiple of three
     if(n % 3 != 0){
         return -1;
     }
@@ -58,7 +58,5 @@ int main(){
     if(finalResult_2 != -1){
         cout << "simpson_threeByEight solution is : " << finalResult_2 << endl;
     }
-    if(finalResult_3 != -1){
-        cout << "trapezoidal solution is : " << finalResult_3 << endl;
-    }
+    cout << "trapezoidal solution is : " << finalResult_3 << endl;
 } 
