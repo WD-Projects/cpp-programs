@@ -31,6 +31,8 @@ public:
 };
 int main(){
     Teacher t1("mahir", "cse", "c++", 25000);
-    Teacher t2(t1); // custom copy constructor
+    Teacher t2(t1);
+    Teacher t3(t2); // custom copy constructor
     t2.getinfo();
+    t3.getinfo();
 }
