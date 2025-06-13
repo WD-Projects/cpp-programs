@@ -1,3 +1,9 @@
+/*
+Inheritance: when properties and members functions of base class (parent class) are passed on to the derived class (child class). in terms of constructor calling, parent class constructor is called then child constructor is called. again, in terms of destructor, the child class memory will be deallocated first then the parent class memory will be deallocated. destructor works opposite of constructor in Inheritance.
+       
+       if the parent class is in private mode it cannot be possible to inherit those property in child class.
+       if the parent is in protected mode, the properties of parent class can only be inherit.
+*/
 #include <iostream>
 #include <string>
 using namespace std;

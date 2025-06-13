@@ -1,3 +1,6 @@
+/*
+Shallow copy constructor: a shallow copy of an object copies all of the member values from one object ot another. but it creates problem when the memory is dynamically allocated. compiler can create shallow constructor by default.
+*/
 #include <iostream>
 #include <string>
 using namespace std;

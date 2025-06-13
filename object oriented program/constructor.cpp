@@ -1,3 +1,31 @@
+/*
+copy constructor: special constructor (default) used to copy properties of one object to another.
+
+there are two types of copy constructor:
+1. default copy costructor 
+2. custom or user defined copy constructor
+
+Constructor: special methods invoked autometically at the time of object creation. used for initialisation.
+
+key points:
+
+1. same name as class(i.e if we decleare the class name as "class Teacher" the constructor name will be Teacher).
+
+2. constructor doesn't have a reutrn type.
+
+3. only called once(autometically) at object creation.
+
+4. memory allocation happens when constructor is called(constructor doesn't created for classes it created for objects. when a class is created few amount of memory will be allocated but when an object is created the memory allocation will be happened and the memory will be allocated for  objects when the constructor is called. it can be called by default with compiler constructor or with user defined constructor).
+
+5. constructor should be must called inside public access modifier. 
+
+
+6. constructor will be called at first for each object declearation.
+
+7. contructor overloading(when multiple constructors are available inside a single class) is a example of polymorphisom.
+
+8. Contructor will be called for each object everytime at first.
+*/
 #include <iostream>
 #include <string>
 using namespace std;

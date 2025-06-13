@@ -1,3 +1,6 @@
+/*
+Destructor: destructor is opposite to constructor. constructor is mainly works for allocating memory for new created object on the other side destructor de-allocates memory. dectructor is autometically created by compiler. for example, when a program terminated the objects are autometically deleted (it's for static memory allocation not for dynamic memory allocation). destructor has the same name as class.
+*/
 #include <iostream>
 #include <string>
 using namespace std;

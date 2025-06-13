@@ -1,3 +1,6 @@
+/*
+Deep copy constructor: a deep copy constructor not only copies the member values but also makes copies of any dynamically allocated memory that the members points to. compiler cannot create deep copy constructor by default, it should be created by user.
+*/
 #include <iostream>
 #include <string>
 using namespace std;

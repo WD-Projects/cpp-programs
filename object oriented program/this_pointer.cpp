@@ -1,3 +1,6 @@
+/*
+"this" is a special pointer in c++ that points to the current object. when a new object is created this pointer points to that object. this->property is same as *(this).property.
+*/
 #include <iostream>
 #include <string>
 using namespace std;
