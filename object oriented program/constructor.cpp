@@ -5,7 +5,7 @@ there are two types of copy constructor:
 1. default copy costructor 
 2. custom or user defined copy constructor
 
-Constructor: special methods invoked autometically at the time of object creation. used for initialisation.
+Constructor: special methods invoked (called) autometically at the time of object creation. used for initialisation.
 
 key points:
 
@@ -18,7 +18,6 @@ key points:
 4. memory allocation happens when constructor is called(constructor doesn't created for classes it created for objects. when a class is created few amount of memory will be allocated but when an object is created the memory allocation will be happened and the memory will be allocated for  objects when the constructor is called. it can be called by default with compiler constructor or with user defined constructor).
 
 5. constructor should be must called inside public access modifier. 
-
 
 6. constructor will be called at first for each object declearation.
 

@@ -23,6 +23,7 @@ public:
         cout << "subject: " << subject << endl;
     }
 };
+
 int main(){
     Teacher t1("mahir", "cse", "c++", 25000);
     t1.getinfo();
