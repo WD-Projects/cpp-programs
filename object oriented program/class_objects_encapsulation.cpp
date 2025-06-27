@@ -9,7 +9,7 @@ classes & objects:
 access modifiers:
 1. private: data & methods accessible inside the class.
 2. public: data & methods accessible to everyone.
-3. protected: data & methods accessible inside class & to its derived class.
+3. protected: data & methods accessible inside class & to its derived (child) class.
 
 oops have 4 pillars:
 1. Encapsulation
